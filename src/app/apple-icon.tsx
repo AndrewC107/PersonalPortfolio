@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 // Simple generated Apple touch icon (no binary asset needed).
 export default function AppleIcon() {
