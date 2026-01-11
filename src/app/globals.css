@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global theme tokens + base styles (Phase 2) */
+:root {
+  /* Use HSL channels so we can do hsl(var(--token) / <alpha>) */
+  --bg: 220 30% 98%; /* near-white */
+  --surface: 0 0% 100%; /* pure white */
+  --surface2: 220 22% 96%; /* lightly tinted surface */
+  --text: 222 47% 8%; /* near-black */
+  --muted: 215 16% 42%; /* slate/gray */
+  --border: 220 16% 90%; /* light gray */
+
+  --accent: 221 83% 54%; /* blue */
+  --accent2: 188 84% 36%; /* subtle cyan/teal (sparingly) */
+  --warm: 40 90% 52%; /* subtle amber (sparingly) */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  color: hsl(var(--text));
+  background: hsl(var(--bg));
+  font-family:
+    var(--font-sans),
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle CSS-only background texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 18% 10%, hsl(var(--accent) / 0.07), transparent 62%),
+    radial-gradient(760px 480px at 82% 14%, hsl(var(--accent2) / 0.06), transparent 58%),
+    radial-gradient(900px 620px at 58% 92%, hsl(var(--warm) / 0.05), transparent 62%);
+  filter: saturate(108%);
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.22);
+}
+
+/* Consistent focus ring (components can also add their own) */
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid hsl(var(--accent) / 0.9);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  /* Anchor offset utility for sticky nav */
+  .section-anchor {
+    scroll-margin-top: 6rem; /* ~96px, matches nav height + spacing */
+  }
+
+  /* Link underline sweep (apply via className="link-sweep") */
+  .link-sweep {
+    position: relative;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent) / 0.9),
+      hsl(var(--accent2) / 0.55)
+    );
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 200ms ease;
+  }
+  .link-sweep:hover,
+  .link-sweep:focus-visible {
+    background-size: 100% 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
