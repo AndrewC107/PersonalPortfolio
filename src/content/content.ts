@@ -173,7 +173,7 @@ const portfolio: PortfolioContent = {
     links: {
       github: "https://github.com/AndrewC107",
       linkedin: "https://www.linkedin.com/in/andrew-cl",
-      website: "https://yourdomain.com",
+      website: "https://andrewcl-portfolio.vercel.app/",
     },
     resume: {
       label: "Download Resume",
@@ -569,9 +569,9 @@ const portfolio: PortfolioContent = {
     contactBlurb:
       "Want to collaborate, chat security, or discuss internships/new-grad roles? Send a message and I’ll get back to you soon.",
     social: [
-      { label: "Email", href: "mailto:you@example.com" },
-      { label: "GitHub", href: "https://github.com/your-handle" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle/" },
+      { label: "Email", href: "mailto:aclausen567@gmail.com" },
+      { label: "GitHub", href: "https://github.com/AndrewC107" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/andrew-cl" },
       { label: "Resume", href: "/resume.pdf" },
     ],
   },
