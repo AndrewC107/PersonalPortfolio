@@ -65,7 +65,28 @@ export default function Page() {
           />
 
           <Container>
-            <div className="grid items-start gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-12">
+            <div className="grid items-start gap-10 md:grid-cols-[minmax(280px,432px)_1fr] md:gap-12">
+              <Reveal delay={0.1} className="md:self-center md:pt-2">
+                <div className="mx-auto w-full max-w-[432px] md:mx-0 md:justify-self-start">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={portfolio.hero.headshot.src}
+                      alt={portfolio.hero.headshot.alt}
+                      fill
+                      sizes="(max-width: 768px) 78vw, 432px"
+                      priority
+                      className={[
+                        "object-contain",
+                        "rounded-[28px]",
+                        // Single natural drop shadow (no background containers/borders/inset effects)
+                        "drop-shadow-[0_18px_34px_hsl(var(--text)/0.18)]",
+                        "select-none",
+                      ].join(" ")}
+                    />
+                  </div>
+                </div>
+              </Reveal>
+
               <div>
                 <Reveal>
                   <p className="text-xs font-semibold uppercase tracking-wider text-[hsl(var(--muted))]">
@@ -110,26 +131,6 @@ export default function Page() {
                   </div>
                 </Reveal>
               </div>
-
-              <Reveal delay={0.1} className="md:pt-2">
-                <div className="mx-auto w-full max-w-[360px]">
-                  <Card variant="highlight" className="p-3">
-                    <div className="relative aspect-square overflow-hidden rounded-2xl">
-                      <Image
-                        src={portfolio.hero.headshot.src}
-                        alt={portfolio.hero.headshot.alt}
-                        fill
-                        sizes="(max-width: 768px) 70vw, 360px"
-                        priority
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="mt-3 text-center text-sm text-[hsl(var(--muted))]">
-                      {portfolio.basics.location}
-                    </p>
-                  </Card>
-                </div>
-              </Reveal>
             </div>
 
             {/* Impact metrics strip (4 independent boxes, evenly spaced) */}
@@ -202,7 +203,7 @@ export default function Page() {
           id={sectionIds.skills}
           eyebrow="Skills"
           title="Skills"
-          subtitle="Tools and technologies I reach for when building secure, reliable products."
+          subtitle=""
         >
           <SkillExplorer
             skillsGroups={portfolio.skills.groups}
@@ -478,7 +479,7 @@ export default function Page() {
           id={sectionIds.experience}
           eyebrow="Experience"
           title="Experience"
-          subtitle="Roles, impact, and the tools I used to ship."
+          subtitle="Work, Internships, and Volunteer Experience has helped define my skills and interests."
           tone="tinted"
         >
           <div className="relative">

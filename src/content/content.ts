@@ -327,7 +327,7 @@ const portfolio: PortfolioContent = {
   projects: {
     projects: [
       {
-        title: "QKD BB84 Simulator",
+        title: "Quantum Key Distribution Simulator - BB84 Protocol",
         impactLine:
           "End-to-end BB84 simulation with live visualization of key exchange and QBER under eavesdropping.",
         description:
@@ -408,10 +408,11 @@ const portfolio: PortfolioContent = {
           "Next/Image",
           "App Router",
           "SEO",
+          "Vercel",
         ],
         links: {
-          demo: "https://andrewc107.github.io/andrew-portfolio/",
-          github: "https://github.com/AndrewC107/andrew-portfolio.git",
+          demo: "https://andrewcl-portfolio.vercel.app/",
+          github: "https://github.com/AndrewC107/PersonalPortfolio.git",
         },
         featured: false,
       },
@@ -460,7 +461,7 @@ const portfolio: PortfolioContent = {
         name: "ISC² Certified in Cybersecurity (CC) – Candidate",
         issuer: "ISC²",
         date: "Expected 2026",
-        credentialUrl: "https://www.credly.com/badges/47cabfe2-d370-4eaf-b309-7f6a53b0211a",
+        credentialUrl: "/certs/ISC2-cc-completion.pdf",
         status: "completed",
         badge: {
           src: "/certs/isc2-cc-candidate.png",
@@ -527,16 +528,16 @@ const portfolio: PortfolioContent = {
         ],
       },
       {
-        role: "Soccer Head Coach / Trainer",
-        org: "TOCA Pro FC",
-        dates: "June 2018 – Present",
-        location: "Mississauga, ON",
+        role: "Teaching Assistant & Orientation Leader",
+        org: "Queen’s University",
+        dates: "Sept 2023 – Dec 2023 | Apr 2024 – Sept 2024",
+        location: "Kingston, ON",
         bullets: [
-          "Instruct and lead youth athletes (ages 4–14) through structured technical and physical training programs.",
-          "Coordinate schedules and communicate regularly with parents and coaching staff to support athlete development.",
-          "Develop leadership, adaptability, and clear communication skills in a dynamic, team-based environment.",
+          "Teaching Assistant for second-year Discrete Mathematics, supporting students through tutorials and problem-solving.",
+          "Orientation Leader for the School of Computing, helping onboard new students and coordinate academic programming.",
+          "Co-Founder and Executive of the Queen’s Table Tennis Club, responsible for organization, leadership, and growth.",
         ],
-        tech: ["Leadership", "Communication", "Training & Development", "Planning", "Organization"],
+        tech: ["Teaching", "Leadership", "Mentorship"],
       },
       {
         role: "Assistant to the Executive Chef",
@@ -551,17 +552,17 @@ const portfolio: PortfolioContent = {
         tech: ["Operations", "Time Management", "Team Collaboration", "Communication", "Adaptability", "Attention to Detail"],
       },
       {
-        role: "Teaching Assistant & Student Leadership",
-        org: "Queen’s University",
-        dates: "2023 – Present",
-        location: "Kingston, ON",
+        role: "Soccer Head Coach / Trainer",
+        org: "TOCA Pro FC",
+        dates: "June 2018 – Present",
+        location: "Mississauga, ON",
         bullets: [
-          "Teaching Assistant for second-year Discrete Mathematics, supporting students through tutorials and problem-solving.",
-          "Orientation Leader for the School of Computing, helping onboard new students and coordinate academic programming.",
-          "Co-Founder and Executive of the Queen’s Table Tennis Club, responsible for organization, leadership, and growth.",
+          "Instruct and lead youth athletes (ages 4–14) through structured technical and physical training programs.",
+          "Coordinate schedules and communicate regularly with parents and coaching staff to support athlete development.",
+          "Develop leadership, adaptability, and clear communication skills in a dynamic, team-based environment.",
         ],
-        tech: ["Teaching", "Leadership", "Mentorship"],
-      },
+        tech: ["Leadership", "Communication", "Training & Development", "Planning", "Organization"],
+      },     
     ],
   },
 
